@@ -355,6 +355,33 @@ func generateLeafWithLifetime(caCertPEM, caKeyPEM []byte, hosts []string, lifeti
 	return certPEM, keyPEM, nil
 }
 
+func TestXdsTLSMaterialSyncerReschedulesEarlyRenewal(t *testing.T) {
+	material := &xdsTLSMaterial{}
+	material.setCertificate(testCertificate(t, time.Now().Add(xdsLeafCertRenewBefore+time.Minute)))
+	secret := xdsSecret(map[string][]byte{
+		xdsCACertKey: []byte("ca"),
+		xdsCAKeyKey:  []byte("key"),
+	})
+	secret.ResourceVersion = "1"
+	s := &xdsTLSMaterialSyncer{
+		ctx:      t.Context(),
+		material: material,
+		lastRV:   "1",
+	}
+	t.Cleanup(func() {
+		if s.cancelRenew != nil {
+			s.cancelRenew()
+		}
+		if s.renewalTimer != nil {
+			s.renewalTimer.Stop()
+		}
+	})
+
+	require.NoError(t, s.refreshSecret(secret, false))
+	require.NotNil(t, s.cancelRenew)
+	require.NotNil(t, s.renewalTimer)
+}
+
 func testCertificate(t *testing.T, notAfter time.Time) tls.Certificate {
 	t.Helper()
 	key, err := ecdsa.GenerateKey(elliptic.P256(), rand.Reader)
