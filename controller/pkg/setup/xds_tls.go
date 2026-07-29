@@ -151,6 +151,13 @@ func (s *xdsTLSMaterialSyncer) reconcile(req types.NamespacedName) error {
 
 func (s *xdsTLSMaterialSyncer) refreshSecret(secret *corev1.Secret, force bool) error {
 	if !force && !s.material.shouldRefresh(secret, s.lastRV) {
+		cert, err := s.material.GetCertificate(nil)
+		if err != nil {
+			return err
+		}
+		if cert != nil {
+			s.scheduleRenewal(secret, *cert)
+		}
 		return nil
 	}
 	certPEM, keyPEM, err := extractServingMaterial(secret, s.hosts)
