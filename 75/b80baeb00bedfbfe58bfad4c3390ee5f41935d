@@ -1,0 +1,39 @@
+ui/src/components/Shell.tsx
+  s_bc1933c5b2e133::t_f61e1ec5a8c826 97-100,310-315,317-325,327-333,335-368
+ui/src/main.tsx
+  s_bc1933c5b2e133::t_b797ea3e2a376c 17-33,77,89,95,101,107,113,119,125,131,137,143,149,161
+ui/src/pages/GuardrailsDump.tsx
+  s_bc1933c5b2e133::t_a4c97966fb198f 1-126
+ui/src/pages/LlmBackendsDump.tsx
+  s_bc1933c5b2e133::t_d489a5047a96b0 1-212
+ui/src/pages/McpBackendsDump.tsx
+  s_bc1933c5b2e133::t_06035a06a5538f 1-134
+ui/src/pages/McpPoliciesDump.tsx
+  s_bc1933c5b2e133::t_86e8739d7bbfe2 1-122
+ui/src/pages/VirtualKeysDump.tsx
+  s_bc1933c5b2e133::t_62b2c804b54965 1-126
+ui/src/pages/XdsUnavailable.tsx
+  s_bc1933c5b2e133::t_1e26319426cef7 1-35
+ui/src/pages/policyDumpUtils.ts
+  s_bc1933c5b2e133::t_9d9ca2eef79e40 1-128
+ui/src/pages/xdsGuardedLlmMcpPages.tsx
+  s_bc1933c5b2e133::t_ac031265cb775c 1-71
+ui/src/pages/xdsGuardedPages.tsx
+  s_bc1933c5b2e133::t_db5a40c34d33f4 1-123
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "75b80baeb00bedfbfe58bfad4c3390ee5f41935d",
+  "prompts": {},
+  "sessions": {
+    "s_bc1933c5b2e133": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d5524eb0-44e5-4c13-b7de-7563298fd444",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Ugo Enyioha <ugo.enyioha@outlook.com>"
+    }
+  }
+}
