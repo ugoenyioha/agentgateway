@@ -1,0 +1,19 @@
+ui/src/pages/LlmBackendsDump.tsx
+  s_bc1933c5b2e133::t_e53814c535efeb 78
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "bb6bbe7e7e5388fbb287fac22690733a2a2f6bba",
+  "prompts": {},
+  "sessions": {
+    "s_bc1933c5b2e133": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d5524eb0-44e5-4c13-b7de-7563298fd444",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Ugo Enyioha <ugo.enyioha@outlook.com>"
+    }
+  }
+}
