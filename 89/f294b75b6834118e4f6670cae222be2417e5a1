@@ -1,0 +1,21 @@
+ui/src/main.tsx
+  s_befd3a671b0351::t_4747da5b1ec53a 12
+ui/src/pages/LlmBackendsDump.tsx
+  s_befd3a671b0351::t_a0f99403e131f6 78
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "89f294b75b6834118e4f6670cae222be2417e5a1",
+  "prompts": {},
+  "sessions": {
+    "s_befd3a671b0351": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ecdacc52effegjm25KJmnD8MwB",
+        "model": "anthropic/claude-sonnet-5-5"
+      },
+      "human_author": "Ugo Enyioha <ugo.enyioha@outlook.com>"
+    }
+  }
+}
