@@ -75,7 +75,7 @@ function isAiBackend(entry: unknown): entry is BackendEntry {
 
 function firstActiveProvider(ai: AiBackend | undefined) {
 	const providers = ai?.target?.providers ?? [];
-	return providers.find(p => p.active) ?? providers[0];
+	return providers.find(p => p.active && Object.keys(p.active).length > 0) ?? providers[0];
 }
 
 function firstActiveEntry(
