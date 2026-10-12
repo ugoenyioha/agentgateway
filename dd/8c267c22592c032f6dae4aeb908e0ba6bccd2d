@@ -1,0 +1,19 @@
+crates/agentgateway/src/a2a/mod.rs
+  s_befd3a671b0351::t_2260798e27e35e 292
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "dd8c267c22592c032f6dae4aeb908e0ba6bccd2d",
+  "prompts": {},
+  "sessions": {
+    "s_befd3a671b0351": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ecdacc52effegjm25KJmnD8MwB",
+        "model": "anthropic/claude-sonnet-5-5"
+      },
+      "human_author": "Ugo Enyioha <ugo.enyioha@outlook.com>"
+    }
+  }
+}
