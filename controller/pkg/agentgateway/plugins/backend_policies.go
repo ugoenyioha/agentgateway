@@ -5,10 +5,8 @@ import (
 	"fmt"
 	"net/url"
 	"strings"
-	"time"
 
 	jsonpb "google.golang.org/protobuf/encoding/protojson"
-	"google.golang.org/protobuf/types/known/durationpb"
 	"google.golang.org/protobuf/types/known/structpb"
 	"istio.io/istio/pkg/config"
 	"istio.io/istio/pkg/maps"
@@ -341,10 +339,12 @@ func translateBackendHealthPolicy(policy *agentgateway.AgentgatewayPolicy) (*api
 
 	var evictionProto *api.BackendPolicySpec_Eviction
 	if healthPolicy.Eviction != nil {
+		// Carried local patch: leave an omitted duration nil. The proxy then prefers the
+		// provider's Retry-After / reset header and only falls back to its own 3s default
+		// (crates/agentgateway/src/http/health.rs). Defaulting to 3s here, as upstream 1.6.0
+		// does, silently overrides the provider's real quota-reset time, so an exhausted
+		// account is retried every 3s instead of draining to the next priority group.
 		duration := durationToProto(healthPolicy.Eviction.Duration)
-		if duration == nil {
-			duration = durationpb.New(3 * time.Second)
-		}
 
 		// Convert 0–100 integer scores into 0.0–1.0 doubles for proto
 		var healthThreshold *float64

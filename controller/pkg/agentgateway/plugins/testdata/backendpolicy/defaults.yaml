@@ -73,8 +73,7 @@ output:
     policy:
       backend:
         health:
-          eviction:
-            duration: 3s
+          eviction: {}
       key: default/defaults:health:default/test
       name:
         kind: AgentgatewayPolicy
