@@ -1,0 +1,23 @@
+controller/pkg/agentgateway/plugins/backend_policies.go
+  s_befd3a671b0351::t_d758ae0af3849b 367-371
+controller/pkg/agentgateway/plugins/backend_health_eviction_test.go
+  s_befd3a671b0351::t_e8d450c8eea458 1-48
+controller/pkg/agentgateway/plugins/testdata/backendpolicy/defaults.yaml
+  s_befd3a671b0351::t_fbcb4bb1f94d02 87
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6b434a91c4b822c00505e16f9c1d486a063a0179",
+  "prompts": {},
+  "sessions": {
+    "s_befd3a671b0351": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ecdacc52effegjm25KJmnD8MwB",
+        "model": "anthropic/claude-sonnet-5-5"
+      },
+      "human_author": "Ugo Enyioha <ugo.enyioha@outlook.com>"
+    }
+  }
+}
