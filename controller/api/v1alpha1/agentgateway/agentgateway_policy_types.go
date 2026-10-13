@@ -336,7 +336,8 @@ type BackendEviction struct {
 	// Subsequent evictions use multiplicative backoff (duration * times_evicted).
 	// If all endpoints are evicted, the load balancer falls back to returning evicted endpoints
 	// rather than failing entirely.
-	// If unset, defaults to `3s`.
+	// If unset, the proxy evicts for the provider's Retry-After (or retry backoff) when the response
+	// carries one, and otherwise for `3s`.
 	// +kubebuilder:validation:XValidation:rule="duration(self) >= duration('1s')",message="duration must be at least 1 second"
 	// +optional
 	Duration *Duration `json:"duration,omitempty"`
