@@ -1,0 +1,25 @@
+controller/api/v1alpha1/agentgateway/agentgateway_policy_types.go
+  s_befd3a671b0351::t_2f746c11ae2533 339-340
+controller/install/helm/agentgateway-crds/templates/agentgateway.dev_agentgatewaybackends.yaml
+  s_befd3a671b0351::t_de2f55c3541bea 6617-6618,15975-15976
+controller/install/helm/agentgateway-crds/templates/agentgateway.dev_agentgatewaymodels.yaml
+  s_befd3a671b0351::t_dd096408d87c09 1710-1711
+controller/install/helm/agentgateway-crds/templates/agentgateway.dev_agentgatewaypolicies.yaml
+  s_befd3a671b0351::t_dc3a3612ecd3d6 5753-5754
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0b82745b0194efff1935a41203b8781b84e6677f",
+  "prompts": {},
+  "sessions": {
+    "s_befd3a671b0351": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ecdacc52effegjm25KJmnD8MwB",
+        "model": "anthropic/claude-sonnet-5-5"
+      },
+      "human_author": "Ugo Enyioha <ugo.enyioha@outlook.com>"
+    }
+  }
+}
